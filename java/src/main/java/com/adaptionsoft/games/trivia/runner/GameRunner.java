@@ -18,10 +18,13 @@ public class GameRunner {
 	public static void playGame(Random rand) {
 		Game aGame = new Game();
 
-		aGame.add("Chet");
-		aGame.add("Pat");
-		aGame.add("Sue");
+		aGame.addPlayer("Chet");
+		aGame.addPlayer("Pat");
+		aGame.addPlayer("Sue");
 
+		if (! aGame.isPlayable()) {
+			return;
+		}
 
 		do {
 
